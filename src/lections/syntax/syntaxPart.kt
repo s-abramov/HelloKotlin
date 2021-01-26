@@ -2,17 +2,7 @@ package lections.syntax
 
 import java.lang.Exception
 
-fun main() {
 
-    lection4()
-    lection6()
-    lection8()
-    lection9()
-    lection10()
-    lection11()
-    lection12()
-
-}
 
 fun lection12() {
     val getSum = {a: Int, b:Int -> a + b}
