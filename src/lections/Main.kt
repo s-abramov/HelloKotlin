@@ -1,9 +1,13 @@
 package lections
 
+import lections.functional.*
 import lections.syntax.*
+import java.util.*
+import kotlin.test.assertEquals
 
 fun main() {
-    syntaxPart()
+    //syntaxPart()
+    //functionalPart()
 }
 
 fun syntaxPart() {
@@ -16,5 +20,10 @@ fun syntaxPart() {
     lection12()
 }
 fun functionalPart() {
-
+    //lection13()
+    //lection14()
+    //lection15()
+    //lection16()
+    //lection17()
+    lection18()
 }

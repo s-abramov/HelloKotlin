@@ -2,8 +2,6 @@ package lections.syntax
 
 import java.lang.Exception
 
-
-
 fun lection12() {
     val getSum = {a: Int, b:Int -> a + b}
     val getSum2: (Int, Int) -> Int = {a, b -> a + b}
