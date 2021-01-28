@@ -2,12 +2,11 @@ package lections
 
 import lections.functional.*
 import lections.syntax.*
-import java.util.*
-import kotlin.test.assertEquals
+
 
 fun main() {
     //syntaxPart()
-    //functionalPart()
+    functionalPart()
 }
 
 fun syntaxPart() {

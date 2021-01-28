@@ -159,7 +159,10 @@ fun lection17() {
 var name: String? = "asd"
 var name2: String? = null
 
+val withList: MutableList<Int>? = mutableListOf()
+
 fun lection18() {
+
 	name?.let {
 		if (it.length > 2)
 			println("gates")
@@ -169,4 +172,26 @@ fun lection18() {
 			println("stub gates")
 	}
 
+	val list = mutableListOf<Int>()
+	for (i in 0..1000) {
+		list.add(i)
+	}
+	with(list) {
+		println(sum())
+		println(average())
+		println(max())
+		println(min())
+	}
+
+	withList?.let {
+		with(withList) {
+			for (i in 0 until 1000) {
+				add((Math.random() * 1000).toInt())
+			}
+			val result = filter { it % 2 == 0 }.take(100)
+			for (i in result) {
+				println(i)
+			}
+		}
+	}
 }
