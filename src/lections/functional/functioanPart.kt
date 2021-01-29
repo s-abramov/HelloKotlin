@@ -195,3 +195,57 @@ fun lection18() {
 		}
 	}
 }
+
+fun modifyString(str: String, modify: (String)-> String) :String {
+	return modify(str)
+}
+// without inline would create object of anonim class
+inline fun hWork(list: List<Int>, operate: (List<Int>) -> Unit) {
+	operate(list)
+}
+
+fun lection19() {
+	val hello = modifyString("Hello World") { it.toUpperCase() }
+	val homeList = mutableListOf<Int>()
+	for (i in 0..100) {
+		homeList.add((Math.random() * 100).toInt())
+	}
+	hWork(homeList) {
+		println(it.sum())
+	}
+
+}
+
+//extension function
+fun Int.isPositive() = this >= 0
+
+fun Int.isPrimeNum(): Boolean {
+	if (this == 2)
+		return true
+	else {
+		for (i in this - 1 downTo 2) {
+			if (this % i == 0)
+				return false
+		}
+	}
+	return true
+}
+
+inline fun<T, R> myWith(list: T, operate: T.() -> R): R {
+	return list.operate()
+}
+
+fun lection20() {
+	val age = 28
+	if (age.isPositive()) {
+		println("Valid")
+	}
+	println(age.isPrimeNum())
+
+	val obj = mutableMapOf("one" to "two", "three" to "four")
+	myWith(obj) {
+		println(mutableListOf(keys))
+		println(values)
+	}
+
+}

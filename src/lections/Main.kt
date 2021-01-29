@@ -24,5 +24,7 @@ fun functionalPart() {
     //lection15()
     //lection16()
     //lection17()
-    lection18()
+    //lection18()
+    //lection19()
+    lection20()
 }
